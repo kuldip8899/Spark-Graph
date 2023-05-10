@@ -1,0 +1,655 @@
+myHadoop: Setting MH_IPOIB_TRANSFORM='s/\([^.]*\).*$/\1.ib.cluster/' from myhadoop.conf
+myHadoop: Setting MH_SCRATCH_DIR=/scratch/$USER/job_$SLURM_JOBID from myhadoop.conf
+myHadoop: Using HADOOP_HOME=/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2
+myHadoop: Using MH_SCRATCH_DIR=/scratch/ksavaliya/job_21513968
+myHadoop: Using JAVA_HOME=/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/openjdk-11.0.2-k5ezeyjgjeqmehyvrmmpymaguuf2qzsk
+myHadoop: Generating Hadoop configuration in directory in /home/ksavaliya/expansecluster...
+myHadoop: Backing up old config dir to /home/ksavaliya/expansecluster.23...
+renamed '/home/ksavaliya/expansecluster' -> '/home/ksavaliya/expansecluster.23'
+cp: -r not specified; omitting directory '/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/etc/hadoop/shellprofile.d'
+myHadoop: Designating exp-8-18.ib.cluster as master node (namenode, secondary namenode, and jobtracker)
+myHadoop: The following nodes will be slaves (datanode, tasktracer):
+exp-8-18.ib.cluster
+WARNING: /scratch/ksavaliya/job_21513968/pids does not exist. Creating.
+WARNING: /scratch/ksavaliya/job_21513968/logs does not exist. Creating.
+2023-04-05 12:45:56,402 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = exp-8-18/198.202.102.73
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 3.2.2
+STARTUP_MSG:   classpath = /home/ksavaliya/expansecluster:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jettison-1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/httpclient-4.5.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-common-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/gson-2.2.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/dnsjava-2.1.7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/slf4j-api-1.7.25.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/hadoop-auth-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-compress-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerby-util-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jsr311-api-1.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/guava-27.0-jre.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerby-xdr-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jsp-api-2.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-math3-3.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/snappy-java-1.0.5.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-server-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/nimbus-jose-jwt-7.9.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jersey-server-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/accessors-smart-1.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/checker-qual-2.5.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-net-3.6.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/failureaccess-1.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/error_prone_annotations-2.2.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerby-pkix-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jersey-json-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-webapp-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerby-config-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/asm-5.0.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/hadoop-annotations-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jsch-0.1.55.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerby-asn1-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-annotations-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/zookeeper-3.4.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-util-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/curator-client-2.13.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-databind-2.9.10.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jaxb-api-2.2.11.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/woodstox-core-5.0.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-logging-1.1.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/paranamer-2.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/re2j-1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/json-smart-2.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/stax2-api-3.1.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/curator-framework-2.13.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/audience-annotations-0.5.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-text-1.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/animal-sniffer-annotations-1.17.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/j2objc-annotations-1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-cli-1.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/curator-recipes-2.13.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-client-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/httpcore-4.4.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/metrics-core-3.2.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-io-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-configuration2-2.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/javax.activation-api-1.2.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jul-to-slf4j-1.7.25.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-security-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/log4j-1.2.17.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jsr305-3.0.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/netty-3.10.6.Final.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-xml-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/token-provider-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/htrace-core4-4.1.0-incubating.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jersey-core-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-servlet-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-core-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-util-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-http-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-io-2.5.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jersey-servlet-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-core-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-codec-1.11.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-collections-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jcip-annotations-1.0-1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-beanutils-1.9.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-server-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-lang3-3.7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/avro-1.7.7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/hadoop-kms-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/hadoop-nfs-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/hadoop-common-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/hadoop-common-3.2.2-tests.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jettison-1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-util-ajax-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/httpclient-4.5.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/gson-2.2.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/okhttp-2.7.5.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/dnsjava-2.1.7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/hadoop-auth-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-compress-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/netty-all-4.1.48.Final.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/okio-1.6.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/guava-27.0-jre.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerby-xdr-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/snappy-java-1.0.5.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-server-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-xc-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-jaxrs-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/nimbus-jose-jwt-7.9.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jersey-server-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/accessors-smart-1.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-admin-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/checker-qual-2.5.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-net-3.6.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/failureaccess-1.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/error_prone_annotations-2.2.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerby-pkix-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jersey-json-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-webapp-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/asm-5.0.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/hadoop-annotations-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jsch-0.1.55.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-annotations-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jaxb-impl-2.2.3-1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/zookeeper-3.4.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-util-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/curator-client-2.13.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-databind-2.9.10.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jaxb-api-2.2.11.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/woodstox-core-5.0.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/paranamer-2.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/re2j-1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/json-smart-2.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/stax2-api-3.1.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/curator-framework-2.13.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/audience-annotations-0.5.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-text-1.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/animal-sniffer-annotations-1.17.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/j2objc-annotations-1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/curator-recipes-2.13.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/httpcore-4.4.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-io-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-configuration2-2.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/javax.activation-api-1.2.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-security-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jsr305-3.0.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/netty-3.10.6.Final.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-xml-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/htrace-core4-4.1.0-incubating.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jersey-core-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-servlet-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/json-simple-1.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-simplekdc-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-util-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-http-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-io-2.5.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jersey-servlet-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-core-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-codec-1.11.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-beanutils-1.9.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-server-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-lang3-3.7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/avro-1.7.7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-client-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-nfs-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.2-tests.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-3.2.2-tests.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-client-3.2.2-tests.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.2-tests.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/lib/junit-4.11.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.2-tests.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-nativetask-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-app-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-uploader-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/java-util-1.9.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/jackson-module-jaxb-annotations-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/jersey-client-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/bcpkix-jdk15on-1.60.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/jackson-jaxrs-base-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/json-io-2.5.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/objenesis-1.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/fst-2.50.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/snakeyaml-1.16.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/bcprov-jdk15on-1.60.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/guice-4.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/metrics-core-3.2.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/jersey-guice-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/jackson-jaxrs-json-provider-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/HikariCP-java7-2.4.12.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/javax.inject-1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/swagger-annotations-1.5.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/aopalliance-1.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-common-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-services-core-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-client-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-api-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-services-api-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-common-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-registry-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-router-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-tests-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-submarine-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.2.2.jar
+STARTUP_MSG:   build = Unknown -r 7a3bc90b05f257c8ace2f76d74264906f0f7a932; compiled by 'hexiaoqiao' on 2021-01-03T09:26Z
+STARTUP_MSG:   java = 11.0.2
+************************************************************/
+2023-04-05 12:45:56,410 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2023-04-05 12:45:56,472 INFO namenode.NameNode: createNameNode [-format]
+2023-04-05 12:45:56,792 INFO common.Util: Assuming 'file' scheme for path /scratch/ksavaliya/job_21513968/namenode_data in configuration.
+2023-04-05 12:45:56,792 INFO common.Util: Assuming 'file' scheme for path /scratch/ksavaliya/job_21513968/namenode_data in configuration.
+Formatting using clusterid: CID-6288ccbd-d8cf-4577-981b-098b3cf5d280
+2023-04-05 12:45:56,822 INFO namenode.FSEditLog: Edit logging is async:true
+2023-04-05 12:45:56,841 INFO namenode.FSNamesystem: KeyProvider: null
+2023-04-05 12:45:56,842 INFO namenode.FSNamesystem: fsLock is fair: true
+2023-04-05 12:45:56,842 INFO namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2023-04-05 12:45:56,868 INFO namenode.FSNamesystem: fsOwner             = ksavaliya (auth:SIMPLE)
+2023-04-05 12:45:56,868 INFO namenode.FSNamesystem: supergroup          = supergroup
+2023-04-05 12:45:56,868 INFO namenode.FSNamesystem: isPermissionEnabled = true
+2023-04-05 12:45:56,868 INFO namenode.FSNamesystem: HA Enabled: false
+2023-04-05 12:45:56,991 INFO common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2023-04-05 12:45:56,997 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2023-04-05 12:45:56,997 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+2023-04-05 12:45:56,999 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2023-04-05 12:45:56,999 INFO blockmanagement.BlockManager: The block deletion will start around 2023 Apr 05 12:45:56
+2023-04-05 12:45:57,000 INFO util.GSet: Computing capacity for map BlocksMap
+2023-04-05 12:45:57,000 INFO util.GSet: VM type       = 64-bit
+2023-04-05 12:45:57,001 INFO util.GSet: 2.0% max memory 30.0 GB = 613.8 MB
+2023-04-05 12:45:57,001 INFO util.GSet: capacity      = 2^26 = 67108864 entries
+2023-04-05 12:45:57,033 INFO blockmanagement.BlockManager: Storage policy satisfier is disabled
+2023-04-05 12:45:57,033 INFO blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2023-04-05 12:45:57,037 INFO Configuration.deprecation: No unit for dfs.namenode.safemode.extension(30000) assuming MILLISECONDS
+2023-04-05 12:45:57,037 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2023-04-05 12:45:57,037 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2023-04-05 12:45:57,037 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+2023-04-05 12:45:57,037 INFO blockmanagement.BlockManager: defaultReplication         = 3
+2023-04-05 12:45:57,037 INFO blockmanagement.BlockManager: maxReplication             = 512
+2023-04-05 12:45:57,038 INFO blockmanagement.BlockManager: minReplication             = 1
+2023-04-05 12:45:57,038 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+2023-04-05 12:45:57,038 INFO blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2023-04-05 12:45:57,038 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+2023-04-05 12:45:57,038 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2023-04-05 12:45:57,052 INFO namenode.FSDirectory: GLOBAL serial map: bits=29 maxEntries=536870911
+2023-04-05 12:45:57,052 INFO namenode.FSDirectory: USER serial map: bits=24 maxEntries=16777215
+2023-04-05 12:45:57,052 INFO namenode.FSDirectory: GROUP serial map: bits=24 maxEntries=16777215
+2023-04-05 12:45:57,052 INFO namenode.FSDirectory: XATTR serial map: bits=24 maxEntries=16777215
+2023-04-05 12:45:57,059 INFO util.GSet: Computing capacity for map INodeMap
+2023-04-05 12:45:57,059 INFO util.GSet: VM type       = 64-bit
+2023-04-05 12:45:57,059 INFO util.GSet: 1.0% max memory 30.0 GB = 306.9 MB
+2023-04-05 12:45:57,059 INFO util.GSet: capacity      = 2^25 = 33554432 entries
+2023-04-05 12:45:57,073 INFO namenode.FSDirectory: ACLs enabled? false
+2023-04-05 12:45:57,073 INFO namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2023-04-05 12:45:57,073 INFO namenode.FSDirectory: XAttrs enabled? true
+2023-04-05 12:45:57,073 INFO namenode.NameNode: Caching file names occurring more than 10 times
+2023-04-05 12:45:57,077 INFO snapshot.SnapshotManager: Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2023-04-05 12:45:57,078 INFO snapshot.SnapshotManager: SkipList is disabled
+2023-04-05 12:45:57,080 INFO util.GSet: Computing capacity for map cachedBlocks
+2023-04-05 12:45:57,080 INFO util.GSet: VM type       = 64-bit
+2023-04-05 12:45:57,081 INFO util.GSet: 0.25% max memory 30.0 GB = 76.7 MB
+2023-04-05 12:45:57,081 INFO util.GSet: capacity      = 2^23 = 8388608 entries
+2023-04-05 12:45:57,090 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2023-04-05 12:45:57,090 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2023-04-05 12:45:57,090 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2023-04-05 12:45:57,092 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+2023-04-05 12:45:57,092 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2023-04-05 12:45:57,093 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+2023-04-05 12:45:57,093 INFO util.GSet: VM type       = 64-bit
+2023-04-05 12:45:57,093 INFO util.GSet: 0.029999999329447746% max memory 30.0 GB = 9.2 MB
+2023-04-05 12:45:57,093 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+2023-04-05 12:45:57,108 INFO namenode.FSImage: Allocated new BlockPoolId: BP-466687145-198.202.102.73-1680723957104
+2023-04-05 12:45:57,119 INFO common.Storage: Storage directory /scratch/ksavaliya/job_21513968/namenode_data has been successfully formatted.
+2023-04-05 12:45:57,142 INFO namenode.FSImageFormatProtobuf: Saving image file /scratch/ksavaliya/job_21513968/namenode_data/current/fsimage.ckpt_0000000000000000000 using no compression
+2023-04-05 12:45:57,224 INFO namenode.FSImageFormatProtobuf: Image file /scratch/ksavaliya/job_21513968/namenode_data/current/fsimage.ckpt_0000000000000000000 of size 404 bytes saved in 0 seconds .
+2023-04-05 12:45:57,235 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+2023-04-05 12:45:57,239 INFO namenode.FSImage: FSImageSaver clean checkpoint: txid=0 when meet shutdown.
+2023-04-05 12:45:57,239 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at exp-8-18/198.202.102.73
+************************************************************/
+myHadoop:  
+myHadoop: Enabling experimental Spark support
+myHadoop: Using SPARK_CONF_DIR=/home/ksavaliya/expansecluster/spark
+myHadoop:  
+To use Spark, you will want to type the following commands:"
+  source /home/ksavaliya/expansecluster/spark/spark-env.sh
+  myspark start
+Starting namenodes on [exp-8-18.ib.cluster]
+Starting datanodes
+WARNING: HADOOP_SECURE_DN_PID_DIR has been replaced by HADOOP_SECURE_PID_DIR. Using value of HADOOP_SECURE_DN_PID_DIR.
+localhost: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+localhost: @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+localhost: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+localhost: IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+localhost: Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+localhost: It is also possible that a host key has just been changed.
+localhost: The fingerprint for the ED25519 key sent by the remote host is
+localhost: SHA256:08Fq1byExze3Uxct/oYBsobH1yJxsKgcFM101HgvQ/A.
+localhost: Please contact your system administrator.
+localhost: Add correct host key in /home/ksavaliya/.ssh/known_hosts to get rid of this message.
+localhost: Offending ED25519 key in /home/ksavaliya/.ssh/known_hosts:1
+localhost: Password authentication is disabled to avoid man-in-the-middle attacks.
+localhost: Keyboard-interactive authentication is disabled to avoid man-in-the-middle attacks.
+localhost: WARNING: HADOOP_SECURE_DN_PID_DIR has been replaced by HADOOP_SECURE_PID_DIR. Using value of HADOOP_SECURE_DN_PID_DIR.
+Starting secondary namenodes [exp-8-18.ib.cluster]
+mySpark: Using /home/ksavaliya/expansecluster/spark/slaves as our slaves file
+mySpark: Reading in /home/ksavaliya/expansecluster/spark/spark-env.sh as our slaves file
+starting org.apache.spark.deploy.master.Master, logging to /scratch/ksavaliya/job_21513968/logs/spark-ksavaliya-org.apache.spark.deploy.master.Master-1-exp-8-18.out
+mySpark: Starting worker on exp-8-18.ib.cluster:
+  /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/spark-3.2.1-bin-hadoop3.2/sbin/spark-daemon.sh --config /home/ksavaliya/expansecluster/spark start org.apache.spark.deploy.worker.Worker 1 spark://exp-8-18.ib.cluster:7077
+starting org.apache.spark.deploy.worker.Worker, logging to /scratch/ksavaliya/job_21513968/logs/spark-ksavaliya-org.apache.spark.deploy.worker.Worker-1-exp-8-18.out
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/spark-3.2.1-bin-hadoop3.2/jars/spark-unsafe_2.12-3.2.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2023-04-05 12:46:20,656 INFO spark.SparkContext: Running Spark version 3.2.1
+2023-04-05 12:46:20,708 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2023-04-05 12:46:20,800 INFO resource.ResourceUtils: ==============================================================
+2023-04-05 12:46:20,801 INFO resource.ResourceUtils: No custom resources configured for spark.driver.
+2023-04-05 12:46:20,801 INFO resource.ResourceUtils: ==============================================================
+2023-04-05 12:46:20,801 INFO spark.SparkContext: Submitted application: Graph
+2023-04-05 12:46:20,817 INFO resource.ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 12, script: , vendor: , memory -> name: memory, amount: 24576, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2023-04-05 12:46:20,839 INFO resource.ResourceProfile: Limiting resource is cpus at 12 tasks per executor
+2023-04-05 12:46:20,840 INFO resource.ResourceProfileManager: Added ResourceProfile id: 0
+2023-04-05 12:46:20,877 INFO spark.SecurityManager: Changing view acls to: ksavaliya
+2023-04-05 12:46:20,877 INFO spark.SecurityManager: Changing modify acls to: ksavaliya
+2023-04-05 12:46:20,878 INFO spark.SecurityManager: Changing view acls groups to: 
+2023-04-05 12:46:20,878 INFO spark.SecurityManager: Changing modify acls groups to: 
+2023-04-05 12:46:20,878 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ksavaliya); groups with view permissions: Set(); users  with modify permissions: Set(ksavaliya); groups with modify permissions: Set()
+2023-04-05 12:46:21,132 INFO util.Utils: Successfully started service 'sparkDriver' on port 44379.
+2023-04-05 12:46:21,159 INFO spark.SparkEnv: Registering MapOutputTracker
+2023-04-05 12:46:21,182 INFO spark.SparkEnv: Registering BlockManagerMaster
+2023-04-05 12:46:21,195 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2023-04-05 12:46:21,196 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+2023-04-05 12:46:21,199 INFO spark.SparkEnv: Registering BlockManagerMasterHeartbeat
+2023-04-05 12:46:21,219 INFO storage.DiskBlockManager: Created local directory at /scratch/ksavaliya/job_21513968/blockmgr-87943479-61e6-4f71-ace6-c69f6f551874
+2023-04-05 12:46:21,249 INFO memory.MemoryStore: MemoryStore started with capacity 14.2 GiB
+2023-04-05 12:46:21,262 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+2023-04-05 12:46:21,356 INFO util.log: Logging initialized @1836ms to org.sparkproject.jetty.util.log.Slf4jLog
+2023-04-05 12:46:21,403 INFO server.Server: jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 11.0.2+9
+2023-04-05 12:46:21,417 INFO server.Server: Started @1897ms
+2023-04-05 12:46:21,447 INFO server.AbstractConnector: Started ServerConnector@568ce404{HTTP/1.1, (http/1.1)}{exp-8-18.ib.cluster:4040}
+2023-04-05 12:46:21,447 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+2023-04-05 12:46:21,463 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2a2843ec{/jobs,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,464 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5c7668ba{/jobs/json,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,465 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@158f4cfe{/jobs/job,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,467 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3f4f5330{/jobs/job/json,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,468 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@750ff7d3{/stages,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,468 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2620e717{/stages/json,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,469 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7636823f{/stages/stage,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,471 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@14b0e127{/stages/stage/json,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,471 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7cea0110{/stages/pool,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,472 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5527b211{/stages/pool/json,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,472 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@78010562{/storage,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,473 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@38aafb53{/storage/json,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,474 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@67f3d192{/storage/rdd,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,474 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@73010765{/storage/rdd/json,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,475 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@52169758{/environment,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,476 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@459b187a{/environment/json,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,476 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@d0865a3{/executors,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,477 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7eae3764{/executors/json,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,477 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4f668f29{/executors/threadDump,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,479 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7e744f43{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,485 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6a4ccef7{/static,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,486 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6ecdbab8{/,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,487 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@19f7222e{/api,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,487 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@29138d3a{/jobs/job/kill,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,488 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6dbcf214{/stages/stage/kill,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,489 INFO ui.SparkUI: Bound SparkUI to exp-8-18.ib.cluster, and started at http://exp-8-18.ib.cluster:4040
+2023-04-05 12:46:21,501 INFO spark.SparkContext: Added JAR file:/home/ksavaliya/project5/partition.jar at spark://exp-8-18.ib.cluster:44379/jars/partition.jar with timestamp 1680723980649
+2023-04-05 12:46:21,665 INFO client.StandaloneAppClient$ClientEndpoint: Connecting to master spark://exp-8-18.ib.cluster:7077...
+2023-04-05 12:46:21,710 INFO client.TransportClientFactory: Successfully created connection to exp-8-18.ib.cluster/10.22.8.18:7077 after 25 ms (0 ms spent in bootstraps)
+2023-04-05 12:46:21,828 INFO cluster.StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20230405124621-0000
+2023-04-05 12:46:21,835 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35487.
+2023-04-05 12:46:21,835 INFO netty.NettyBlockTransferService: Server created on exp-8-18.ib.cluster:35487
+2023-04-05 12:46:21,836 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2023-04-05 12:46:21,840 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20230405124621-0000/0 on worker-20230405124614-10.22.8.18-39845 (10.22.8.18:39845) with 12 core(s)
+2023-04-05 12:46:21,842 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, exp-8-18.ib.cluster, 35487, None)
+2023-04-05 12:46:21,842 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20230405124621-0000/0 on hostPort 10.22.8.18:39845 with 12 core(s), 24.0 GiB RAM
+2023-04-05 12:46:21,842 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20230405124621-0000/1 on worker-20230405124614-10.22.8.18-39845 (10.22.8.18:39845) with 12 core(s)
+2023-04-05 12:46:21,843 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20230405124621-0000/1 on hostPort 10.22.8.18:39845 with 12 core(s), 24.0 GiB RAM
+2023-04-05 12:46:21,843 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20230405124621-0000/2 on worker-20230405124614-10.22.8.18-39845 (10.22.8.18:39845) with 12 core(s)
+2023-04-05 12:46:21,843 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20230405124621-0000/2 on hostPort 10.22.8.18:39845 with 12 core(s), 24.0 GiB RAM
+2023-04-05 12:46:21,843 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20230405124621-0000/3 on worker-20230405124614-10.22.8.18-39845 (10.22.8.18:39845) with 12 core(s)
+2023-04-05 12:46:21,844 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20230405124621-0000/3 on hostPort 10.22.8.18:39845 with 12 core(s), 24.0 GiB RAM
+2023-04-05 12:46:21,844 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20230405124621-0000/4 on worker-20230405124614-10.22.8.18-39845 (10.22.8.18:39845) with 12 core(s)
+2023-04-05 12:46:21,845 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20230405124621-0000/4 on hostPort 10.22.8.18:39845 with 12 core(s), 24.0 GiB RAM
+2023-04-05 12:46:21,845 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20230405124621-0000/5 on worker-20230405124614-10.22.8.18-39845 (10.22.8.18:39845) with 12 core(s)
+2023-04-05 12:46:21,845 INFO storage.BlockManagerMasterEndpoint: Registering block manager exp-8-18.ib.cluster:35487 with 14.2 GiB RAM, BlockManagerId(driver, exp-8-18.ib.cluster, 35487, None)
+2023-04-05 12:46:21,846 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20230405124621-0000/5 on hostPort 10.22.8.18:39845 with 12 core(s), 24.0 GiB RAM
+2023-04-05 12:46:21,846 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20230405124621-0000/6 on worker-20230405124614-10.22.8.18-39845 (10.22.8.18:39845) with 12 core(s)
+2023-04-05 12:46:21,846 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20230405124621-0000/6 on hostPort 10.22.8.18:39845 with 12 core(s), 24.0 GiB RAM
+2023-04-05 12:46:21,846 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20230405124621-0000/7 on worker-20230405124614-10.22.8.18-39845 (10.22.8.18:39845) with 12 core(s)
+2023-04-05 12:46:21,847 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20230405124621-0000/7 on hostPort 10.22.8.18:39845 with 12 core(s), 24.0 GiB RAM
+2023-04-05 12:46:21,847 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20230405124621-0000/8 on worker-20230405124614-10.22.8.18-39845 (10.22.8.18:39845) with 12 core(s)
+2023-04-05 12:46:21,848 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20230405124621-0000/8 on hostPort 10.22.8.18:39845 with 12 core(s), 24.0 GiB RAM
+2023-04-05 12:46:21,848 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20230405124621-0000/9 on worker-20230405124614-10.22.8.18-39845 (10.22.8.18:39845) with 12 core(s)
+2023-04-05 12:46:21,848 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, exp-8-18.ib.cluster, 35487, None)
+2023-04-05 12:46:21,848 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20230405124621-0000/9 on hostPort 10.22.8.18:39845 with 12 core(s), 24.0 GiB RAM
+2023-04-05 12:46:21,849 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, exp-8-18.ib.cluster, 35487, None)
+2023-04-05 12:46:21,964 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4976085{/metrics/json,null,AVAILABLE,@Spark}
+2023-04-05 12:46:21,996 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20230405124621-0000/5 is now RUNNING
+2023-04-05 12:46:21,998 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20230405124621-0000/7 is now RUNNING
+2023-04-05 12:46:22,001 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20230405124621-0000/6 is now RUNNING
+2023-04-05 12:46:22,002 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20230405124621-0000/0 is now RUNNING
+2023-04-05 12:46:22,003 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20230405124621-0000/4 is now RUNNING
+2023-04-05 12:46:22,005 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20230405124621-0000/2 is now RUNNING
+2023-04-05 12:46:22,006 INFO cluster.StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+2023-04-05 12:46:22,006 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20230405124621-0000/1 is now RUNNING
+2023-04-05 12:46:22,007 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20230405124621-0000/8 is now RUNNING
+2023-04-05 12:46:22,008 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20230405124621-0000/3 is now RUNNING
+2023-04-05 12:46:22,009 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20230405124621-0000/9 is now RUNNING
+2023-04-05 12:46:22,366 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 221.4 KiB, free 14.2 GiB)
+2023-04-05 12:46:22,421 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 32.4 KiB, free 14.2 GiB)
+2023-04-05 12:46:22,423 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 32.4 KiB, free: 14.2 GiB)
+2023-04-05 12:46:22,427 INFO spark.SparkContext: Created broadcast 0 from textFile at Partition.scala:17
+2023-04-05 12:46:22,871 INFO mapred.FileInputFormat: Total input files to process : 1
+2023-04-05 12:46:23,065 INFO spark.SparkContext: Starting job: collect at Partition.scala:26
+2023-04-05 12:46:23,317 INFO scheduler.DAGScheduler: Registering RDD 5 (flatMap at Partition.scala:21) as input to shuffle 7
+2023-04-05 12:46:23,321 INFO scheduler.DAGScheduler: Registering RDD 7 (map at Partition.scala:23) as input to shuffle 0
+2023-04-05 12:46:23,322 INFO scheduler.DAGScheduler: Registering RDD 12 (flatMap at Partition.scala:21) as input to shuffle 8
+2023-04-05 12:46:23,323 INFO scheduler.DAGScheduler: Registering RDD 14 (map at Partition.scala:23) as input to shuffle 1
+2023-04-05 12:46:23,323 INFO scheduler.DAGScheduler: Registering RDD 21 (map at Partition.scala:23) as input to shuffle 2
+2023-04-05 12:46:23,324 INFO scheduler.DAGScheduler: Registering RDD 19 (flatMap at Partition.scala:21) as input to shuffle 9
+2023-04-05 12:46:23,324 INFO scheduler.DAGScheduler: Registering RDD 28 (map at Partition.scala:23) as input to shuffle 3
+2023-04-05 12:46:23,325 INFO scheduler.DAGScheduler: Registering RDD 26 (flatMap at Partition.scala:21) as input to shuffle 10
+2023-04-05 12:46:23,325 INFO scheduler.DAGScheduler: Registering RDD 33 (flatMap at Partition.scala:21) as input to shuffle 11
+2023-04-05 12:46:23,325 INFO scheduler.DAGScheduler: Registering RDD 35 (map at Partition.scala:23) as input to shuffle 4
+2023-04-05 12:46:23,327 INFO scheduler.DAGScheduler: Registering RDD 40 (flatMap at Partition.scala:21) as input to shuffle 12
+2023-04-05 12:46:23,327 INFO scheduler.DAGScheduler: Registering RDD 42 (map at Partition.scala:23) as input to shuffle 5
+2023-04-05 12:46:23,328 INFO scheduler.DAGScheduler: Registering RDD 47 (map at Partition.scala:26) as input to shuffle 6
+2023-04-05 12:46:23,331 INFO scheduler.DAGScheduler: Got job 0 (collect at Partition.scala:26) with 2 output partitions
+2023-04-05 12:46:23,331 INFO scheduler.DAGScheduler: Final stage: ResultStage 13 (collect at Partition.scala:26)
+2023-04-05 12:46:23,332 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 12)
+2023-04-05 12:46:23,334 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 12)
+2023-04-05 12:46:23,342 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[5] at flatMap at Partition.scala:21), which has no missing parents
+2023-04-05 12:46:23,391 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 7.5 KiB, free 14.2 GiB)
+2023-04-05 12:46:23,397 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.2 KiB, free 14.2 GiB)
+2023-04-05 12:46:23,399 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 4.2 KiB, free: 14.2 GiB)
+2023-04-05 12:46:23,400 INFO spark.SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:23,416 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[5] at flatMap at Partition.scala:21) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:23,416 INFO scheduler.TaskSchedulerImpl: Adding task set 0.0 with 2 tasks resource profile 0
+2023-04-05 12:46:23,435 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[7] at map at Partition.scala:23), which has no missing parents
+2023-04-05 12:46:23,442 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 6.6 KiB, free 14.2 GiB)
+2023-04-05 12:46:23,445 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 3.6 KiB, free 14.2 GiB)
+2023-04-05 12:46:23,446 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.6 KiB, free: 14.2 GiB)
+2023-04-05 12:46:23,446 INFO spark.SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:23,447 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[7] at map at Partition.scala:23) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:23,447 INFO scheduler.TaskSchedulerImpl: Adding task set 1.0 with 2 tasks resource profile 0
+2023-04-05 12:46:24,085 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.8.18:53744) with ID 8,  ResourceProfileId 0
+2023-04-05 12:46:24,091 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.8.18:53742) with ID 1,  ResourceProfileId 0
+2023-04-05 12:46:24,132 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.8.18:53748) with ID 2,  ResourceProfileId 0
+2023-04-05 12:46:24,147 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.8.18:53752) with ID 9,  ResourceProfileId 0
+2023-04-05 12:46:24,147 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.8.18:53746) with ID 5,  ResourceProfileId 0
+2023-04-05 12:46:24,150 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.8.18:53750) with ID 4,  ResourceProfileId 0
+2023-04-05 12:46:24,171 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.8.18:53756) with ID 0,  ResourceProfileId 0
+2023-04-05 12:46:24,172 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.8.18:53754) with ID 3,  ResourceProfileId 0
+2023-04-05 12:46:24,173 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.8.18:53760) with ID 6,  ResourceProfileId 0
+2023-04-05 12:46:24,191 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.8.18:53758) with ID 7,  ResourceProfileId 0
+2023-04-05 12:46:24,213 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.8.18:36529 with 14.2 GiB RAM, BlockManagerId(8, 10.22.8.18, 36529, None)
+2023-04-05 12:46:24,215 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.8.18:39973 with 14.2 GiB RAM, BlockManagerId(1, 10.22.8.18, 39973, None)
+2023-04-05 12:46:24,224 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.8.18:46289 with 14.2 GiB RAM, BlockManagerId(2, 10.22.8.18, 46289, None)
+2023-04-05 12:46:24,242 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.8.18:32843 with 14.2 GiB RAM, BlockManagerId(5, 10.22.8.18, 32843, None)
+2023-04-05 12:46:24,252 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.8.18:38265 with 14.2 GiB RAM, BlockManagerId(4, 10.22.8.18, 38265, None)
+2023-04-05 12:46:24,261 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.8.18:38929 with 14.2 GiB RAM, BlockManagerId(9, 10.22.8.18, 38929, None)
+2023-04-05 12:46:24,262 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.8.18:37819 with 14.2 GiB RAM, BlockManagerId(0, 10.22.8.18, 37819, None)
+2023-04-05 12:46:24,271 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.8.18:34689 with 14.2 GiB RAM, BlockManagerId(6, 10.22.8.18, 34689, None)
+2023-04-05 12:46:24,273 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.8.18:38117 with 14.2 GiB RAM, BlockManagerId(3, 10.22.8.18, 38117, None)
+2023-04-05 12:46:24,306 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.8.18:43703 with 14.2 GiB RAM, BlockManagerId(7, 10.22.8.18, 43703, None)
+2023-04-05 12:46:24,329 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (10.22.8.18, executor 1, partition 0, ANY, 4525 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:24,332 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (10.22.8.18, executor 1, partition 1, ANY, 4525 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:24,333 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2) (10.22.8.18, executor 1, partition 0, ANY, 4525 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:24,333 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3) (10.22.8.18, executor 1, partition 1, ANY, 4525 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:24,535 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.8.18:39973 (size: 4.2 KiB, free: 14.2 GiB)
+2023-04-05 12:46:24,536 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on 10.22.8.18:39973 (size: 3.6 KiB, free: 14.2 GiB)
+2023-04-05 12:46:24,783 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.8.18:39973 (size: 32.4 KiB, free: 14.2 GiB)
+2023-04-05 12:46:25,965 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 1631 ms on 10.22.8.18 (executor 1) (1/2)
+2023-04-05 12:46:25,966 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 1633 ms on 10.22.8.18 (executor 1) (2/2)
+2023-04-05 12:46:25,967 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:25,974 INFO scheduler.DAGScheduler: ShuffleMapStage 1 (map at Partition.scala:23) finished in 2.536 s
+2023-04-05 12:46:25,975 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:25,975 INFO scheduler.DAGScheduler: running: Set(ShuffleMapStage 0)
+2023-04-05 12:46:25,975 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ShuffleMapStage 9, ResultStage 13, ShuffleMapStage 5, ShuffleMapStage 2, ShuffleMapStage 6, ShuffleMapStage 3, ShuffleMapStage 10, ShuffleMapStage 7, ShuffleMapStage 4, ShuffleMapStage 11, ShuffleMapStage 8)
+2023-04-05 12:46:25,975 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:26,192 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1886 ms on 10.22.8.18 (executor 1) (1/2)
+2023-04-05 12:46:26,193 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1861 ms on 10.22.8.18 (executor 1) (2/2)
+2023-04-05 12:46:26,193 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:26,194 INFO scheduler.DAGScheduler: ShuffleMapStage 0 (flatMap at Partition.scala:21) finished in 2.834 s
+2023-04-05 12:46:26,194 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:26,194 INFO scheduler.DAGScheduler: running: Set()
+2023-04-05 12:46:26,194 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ShuffleMapStage 9, ResultStage 13, ShuffleMapStage 5, ShuffleMapStage 2, ShuffleMapStage 6, ShuffleMapStage 3, ShuffleMapStage 10, ShuffleMapStage 7, ShuffleMapStage 4, ShuffleMapStage 11, ShuffleMapStage 8)
+2023-04-05 12:46:26,194 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:26,194 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[12] at flatMap at Partition.scala:21), which has no missing parents
+2023-04-05 12:46:26,206 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 6.9 KiB, free 14.2 GiB)
+2023-04-05 12:46:26,208 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:26,209 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:26,209 INFO spark.SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:26,210 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[12] at flatMap at Partition.scala:21) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:26,210 INFO scheduler.TaskSchedulerImpl: Adding task set 2.0 with 2 tasks resource profile 0
+2023-04-05 12:46:26,211 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[14] at map at Partition.scala:23), which has no missing parents
+2023-04-05 12:46:26,214 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 6.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:26,215 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 2.0 (TID 4) (10.22.8.18, executor 2, partition 0, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:26,215 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 2.0 (TID 5) (10.22.8.18, executor 8, partition 1, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:26,215 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:26,215 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:26,216 INFO spark.SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:26,216 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[14] at map at Partition.scala:23) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:26,216 INFO scheduler.TaskSchedulerImpl: Adding task set 3.0 with 2 tasks resource profile 0
+2023-04-05 12:46:26,218 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 3.0 (TID 6) (10.22.8.18, executor 4, partition 0, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:26,218 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 3.0 (TID 7) (10.22.8.18, executor 5, partition 1, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:26,352 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on 10.22.8.18:36529 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:26,360 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on 10.22.8.18:38265 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:26,364 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on 10.22.8.18:32843 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:26,368 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on 10.22.8.18:46289 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:26,512 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 7 to 10.22.8.18:53750
+2023-04-05 12:46:26,525 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 7 to 10.22.8.18:53748
+2023-04-05 12:46:26,526 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 7 to 10.22.8.18:53744
+2023-04-05 12:46:26,538 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 7 to 10.22.8.18:53746
+2023-04-05 12:46:26,945 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.22.8.18:53750
+2023-04-05 12:46:26,948 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.22.8.18:53744
+2023-04-05 12:46:26,958 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.22.8.18:53746
+2023-04-05 12:46:26,966 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.22.8.18:53748
+2023-04-05 12:46:27,674 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 2.0 (TID 5) in 1459 ms on 10.22.8.18 (executor 8) (1/2)
+2023-04-05 12:46:27,686 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 2.0 (TID 4) in 1475 ms on 10.22.8.18 (executor 2) (2/2)
+2023-04-05 12:46:27,686 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:27,687 INFO scheduler.DAGScheduler: ShuffleMapStage 2 (flatMap at Partition.scala:21) finished in 1.487 s
+2023-04-05 12:46:27,687 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:27,687 INFO scheduler.DAGScheduler: running: Set(ShuffleMapStage 3)
+2023-04-05 12:46:27,687 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ShuffleMapStage 9, ResultStage 13, ShuffleMapStage 5, ShuffleMapStage 6, ShuffleMapStage 10, ShuffleMapStage 7, ShuffleMapStage 4, ShuffleMapStage 11, ShuffleMapStage 8)
+2023-04-05 12:46:27,687 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:27,741 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 3.0 (TID 6) in 1524 ms on 10.22.8.18 (executor 4) (1/2)
+2023-04-05 12:46:27,799 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 3.0 (TID 7) in 1581 ms on 10.22.8.18 (executor 5) (2/2)
+2023-04-05 12:46:27,799 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:27,799 INFO scheduler.DAGScheduler: ShuffleMapStage 3 (map at Partition.scala:23) finished in 1.587 s
+2023-04-05 12:46:27,800 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:27,800 INFO scheduler.DAGScheduler: running: Set()
+2023-04-05 12:46:27,800 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ShuffleMapStage 9, ResultStage 13, ShuffleMapStage 5, ShuffleMapStage 6, ShuffleMapStage 10, ShuffleMapStage 7, ShuffleMapStage 4, ShuffleMapStage 11, ShuffleMapStage 8)
+2023-04-05 12:46:27,800 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:27,800 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[19] at flatMap at Partition.scala:21), which has no missing parents
+2023-04-05 12:46:27,808 INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 6.9 KiB, free 14.2 GiB)
+2023-04-05 12:46:27,809 INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:27,810 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:27,811 INFO spark.SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:27,811 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[19] at flatMap at Partition.scala:21) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:27,811 INFO scheduler.TaskSchedulerImpl: Adding task set 5.0 with 2 tasks resource profile 0
+2023-04-05 12:46:27,812 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 4 (MapPartitionsRDD[21] at map at Partition.scala:23), which has no missing parents
+2023-04-05 12:46:27,812 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 5.0 (TID 8) (10.22.8.18, executor 1, partition 0, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:27,813 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 5.0 (TID 9) (10.22.8.18, executor 9, partition 1, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:27,814 INFO memory.MemoryStore: Block broadcast_6 stored as values in memory (estimated size 6.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:27,816 INFO memory.MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:27,816 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:27,816 INFO spark.SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:27,817 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[21] at map at Partition.scala:23) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:27,817 INFO scheduler.TaskSchedulerImpl: Adding task set 4.0 with 2 tasks resource profile 0
+2023-04-05 12:46:27,818 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 4.0 (TID 10) (10.22.8.18, executor 7, partition 0, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:27,818 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 4.0 (TID 11) (10.22.8.18, executor 9, partition 1, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:27,853 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.8.18:39973 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:27,867 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 8 to 10.22.8.18:53742
+2023-04-05 12:46:27,971 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on 10.22.8.18:43703 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:27,990 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on 10.22.8.18:38929 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:27,990 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.8.18:38929 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:28,043 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.22.8.18:53742
+2023-04-05 12:46:28,133 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 8 to 10.22.8.18:53758
+2023-04-05 12:46:28,191 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 8 to 10.22.8.18:53752
+2023-04-05 12:46:28,532 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 5.0 (TID 8) in 720 ms on 10.22.8.18 (executor 1) (1/2)
+2023-04-05 12:46:28,564 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.22.8.18:53758
+2023-04-05 12:46:28,724 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.22.8.18:53752
+2023-04-05 12:46:29,454 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 4.0 (TID 10) in 1636 ms on 10.22.8.18 (executor 7) (1/2)
+2023-04-05 12:46:29,624 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 5.0 (TID 9) in 1812 ms on 10.22.8.18 (executor 9) (2/2)
+2023-04-05 12:46:29,625 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:29,625 INFO scheduler.DAGScheduler: ShuffleMapStage 5 (flatMap at Partition.scala:21) finished in 1.824 s
+2023-04-05 12:46:29,626 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:29,626 INFO scheduler.DAGScheduler: running: Set(ShuffleMapStage 4)
+2023-04-05 12:46:29,626 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ShuffleMapStage 9, ResultStage 13, ShuffleMapStage 6, ShuffleMapStage 10, ShuffleMapStage 7, ShuffleMapStage 11, ShuffleMapStage 8)
+2023-04-05 12:46:29,626 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:29,699 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 4.0 (TID 11) in 1881 ms on 10.22.8.18 (executor 9) (2/2)
+2023-04-05 12:46:29,699 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:29,700 INFO scheduler.DAGScheduler: ShuffleMapStage 4 (map at Partition.scala:23) finished in 1.886 s
+2023-04-05 12:46:29,700 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:29,700 INFO scheduler.DAGScheduler: running: Set()
+2023-04-05 12:46:29,700 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ShuffleMapStage 9, ResultStage 13, ShuffleMapStage 6, ShuffleMapStage 10, ShuffleMapStage 7, ShuffleMapStage 11, ShuffleMapStage 8)
+2023-04-05 12:46:29,700 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:29,700 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 6 (MapPartitionsRDD[28] at map at Partition.scala:23), which has no missing parents
+2023-04-05 12:46:29,703 INFO memory.MemoryStore: Block broadcast_7 stored as values in memory (estimated size 6.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:29,705 INFO memory.MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:29,705 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:29,706 INFO spark.SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:29,706 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[28] at map at Partition.scala:23) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:29,706 INFO scheduler.TaskSchedulerImpl: Adding task set 6.0 with 2 tasks resource profile 0
+2023-04-05 12:46:29,707 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 7 (MapPartitionsRDD[26] at flatMap at Partition.scala:21), which has no missing parents
+2023-04-05 12:46:29,707 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 6.0 (TID 12) (10.22.8.18, executor 1, partition 0, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:29,708 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 6.0 (TID 13) (10.22.8.18, executor 2, partition 1, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:29,709 INFO memory.MemoryStore: Block broadcast_8 stored as values in memory (estimated size 6.9 KiB, free 14.2 GiB)
+2023-04-05 12:46:29,711 INFO memory.MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:29,711 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:29,712 INFO spark.SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:29,712 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 7 (MapPartitionsRDD[26] at flatMap at Partition.scala:21) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:29,712 INFO scheduler.TaskSchedulerImpl: Adding task set 7.0 with 2 tasks resource profile 0
+2023-04-05 12:46:29,713 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 7.0 (TID 14) (10.22.8.18, executor 2, partition 0, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:29,714 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 7.0 (TID 15) (10.22.8.18, executor 4, partition 1, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:29,720 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on 10.22.8.18:39973 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:29,724 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 9 to 10.22.8.18:53742
+2023-04-05 12:46:29,728 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on 10.22.8.18:38265 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:29,735 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 9 to 10.22.8.18:53750
+2023-04-05 12:46:29,744 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on 10.22.8.18:46289 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:29,757 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on 10.22.8.18:46289 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:29,764 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 9 to 10.22.8.18:53748
+2023-04-05 12:46:29,781 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.22.8.18:53742
+2023-04-05 12:46:29,819 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.22.8.18:53750
+2023-04-05 12:46:29,884 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.22.8.18:53748
+2023-04-05 12:46:30,306 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 6.0 (TID 12) in 599 ms on 10.22.8.18 (executor 1) (1/2)
+2023-04-05 12:46:30,462 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 7.0 (TID 15) in 749 ms on 10.22.8.18 (executor 4) (1/2)
+2023-04-05 12:46:30,500 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 7.0 (TID 14) in 787 ms on 10.22.8.18 (executor 2) (2/2)
+2023-04-05 12:46:30,500 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:30,501 INFO scheduler.DAGScheduler: ShuffleMapStage 7 (flatMap at Partition.scala:21) finished in 0.793 s
+2023-04-05 12:46:30,501 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:30,501 INFO scheduler.DAGScheduler: running: Set(ShuffleMapStage 6)
+2023-04-05 12:46:30,501 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ShuffleMapStage 9, ResultStage 13, ShuffleMapStage 10, ShuffleMapStage 11, ShuffleMapStage 8)
+2023-04-05 12:46:30,501 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:30,610 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 6.0 (TID 13) in 903 ms on 10.22.8.18 (executor 2) (2/2)
+2023-04-05 12:46:30,610 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:30,611 INFO scheduler.DAGScheduler: ShuffleMapStage 6 (map at Partition.scala:23) finished in 0.909 s
+2023-04-05 12:46:30,611 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:30,611 INFO scheduler.DAGScheduler: running: Set()
+2023-04-05 12:46:30,611 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ShuffleMapStage 9, ResultStage 13, ShuffleMapStage 10, ShuffleMapStage 11, ShuffleMapStage 8)
+2023-04-05 12:46:30,611 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:30,611 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 9 (MapPartitionsRDD[35] at map at Partition.scala:23), which has no missing parents
+2023-04-05 12:46:30,613 INFO memory.MemoryStore: Block broadcast_9 stored as values in memory (estimated size 6.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:30,615 INFO memory.MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:30,616 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:30,616 INFO spark.SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:30,617 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 9 (MapPartitionsRDD[35] at map at Partition.scala:23) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:30,617 INFO scheduler.TaskSchedulerImpl: Adding task set 9.0 with 2 tasks resource profile 0
+2023-04-05 12:46:30,617 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 8 (MapPartitionsRDD[33] at flatMap at Partition.scala:21), which has no missing parents
+2023-04-05 12:46:30,618 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 9.0 (TID 16) (10.22.8.18, executor 2, partition 0, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:30,618 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 9.0 (TID 17) (10.22.8.18, executor 5, partition 1, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:30,619 INFO memory.MemoryStore: Block broadcast_10 stored as values in memory (estimated size 6.9 KiB, free 14.2 GiB)
+2023-04-05 12:46:30,621 INFO memory.MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:30,621 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:30,622 INFO spark.SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:30,623 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 8 (MapPartitionsRDD[33] at flatMap at Partition.scala:21) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:30,623 INFO scheduler.TaskSchedulerImpl: Adding task set 8.0 with 2 tasks resource profile 0
+2023-04-05 12:46:30,624 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 8.0 (TID 18) (10.22.8.18, executor 3, partition 0, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:30,624 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 8.0 (TID 19) (10.22.8.18, executor 9, partition 1, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:30,629 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on 10.22.8.18:46289 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:30,634 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 10 to 10.22.8.18:53748
+2023-04-05 12:46:30,635 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on 10.22.8.18:32843 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:30,642 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 10 to 10.22.8.18:53746
+2023-04-05 12:46:30,649 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on 10.22.8.18:38929 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:30,655 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 10 to 10.22.8.18:53752
+2023-04-05 12:46:30,678 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 3 to 10.22.8.18:53748
+2023-04-05 12:46:30,714 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 3 to 10.22.8.18:53752
+2023-04-05 12:46:30,720 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 3 to 10.22.8.18:53746
+2023-04-05 12:46:30,782 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on 10.22.8.18:38117 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:30,961 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 10 to 10.22.8.18:53754
+2023-04-05 12:46:31,215 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 9.0 (TID 16) in 597 ms on 10.22.8.18 (executor 2) (1/2)
+2023-04-05 12:46:31,254 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 9.0 (TID 17) in 636 ms on 10.22.8.18 (executor 5) (2/2)
+2023-04-05 12:46:31,255 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:31,255 INFO scheduler.DAGScheduler: ShuffleMapStage 9 (map at Partition.scala:23) finished in 0.643 s
+2023-04-05 12:46:31,255 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:31,255 INFO scheduler.DAGScheduler: running: Set(ShuffleMapStage 8)
+2023-04-05 12:46:31,255 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ResultStage 13, ShuffleMapStage 10, ShuffleMapStage 11)
+2023-04-05 12:46:31,255 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:31,348 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 8.0 (TID 19) in 724 ms on 10.22.8.18 (executor 9) (1/2)
+2023-04-05 12:46:31,398 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 3 to 10.22.8.18:53754
+2023-04-05 12:46:32,490 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 8.0 (TID 18) in 1866 ms on 10.22.8.18 (executor 3) (2/2)
+2023-04-05 12:46:32,490 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:32,491 INFO scheduler.DAGScheduler: ShuffleMapStage 8 (flatMap at Partition.scala:21) finished in 1.872 s
+2023-04-05 12:46:32,491 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:32,491 INFO scheduler.DAGScheduler: running: Set()
+2023-04-05 12:46:32,491 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ResultStage 13, ShuffleMapStage 10, ShuffleMapStage 11)
+2023-04-05 12:46:32,491 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:32,491 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 10 (MapPartitionsRDD[40] at flatMap at Partition.scala:21), which has no missing parents
+2023-04-05 12:46:32,495 INFO memory.MemoryStore: Block broadcast_11 stored as values in memory (estimated size 6.9 KiB, free 14.2 GiB)
+2023-04-05 12:46:32,496 INFO memory.MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:32,497 INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:32,498 INFO spark.SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:32,498 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[40] at flatMap at Partition.scala:21) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:32,498 INFO scheduler.TaskSchedulerImpl: Adding task set 10.0 with 2 tasks resource profile 0
+2023-04-05 12:46:32,499 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 11 (MapPartitionsRDD[42] at map at Partition.scala:23), which has no missing parents
+2023-04-05 12:46:32,500 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 10.0 (TID 20) (10.22.8.18, executor 3, partition 0, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:32,500 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 10.0 (TID 21) (10.22.8.18, executor 9, partition 1, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:32,501 INFO memory.MemoryStore: Block broadcast_12 stored as values in memory (estimated size 6.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:32,503 INFO memory.MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:32,504 INFO storage.BlockManagerInfo: Added broadcast_12_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:32,504 INFO spark.SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:32,505 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 11 (MapPartitionsRDD[42] at map at Partition.scala:23) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:32,505 INFO scheduler.TaskSchedulerImpl: Adding task set 11.0 with 2 tasks resource profile 0
+2023-04-05 12:46:32,507 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 11.0 (TID 22) (10.22.8.18, executor 4, partition 0, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:32,507 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 11.0 (TID 23) (10.22.8.18, executor 2, partition 1, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:32,516 INFO storage.BlockManagerInfo: Added broadcast_12_piece0 in memory on 10.22.8.18:46289 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:32,517 INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on 10.22.8.18:38929 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:32,520 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 11 to 10.22.8.18:53748
+2023-04-05 12:46:32,524 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 11 to 10.22.8.18:53752
+2023-04-05 12:46:32,524 INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on 10.22.8.18:38117 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:32,531 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 11 to 10.22.8.18:53754
+2023-04-05 12:46:32,539 INFO storage.BlockManagerInfo: Added broadcast_12_piece0 in memory on 10.22.8.18:38265 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:32,544 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 11 to 10.22.8.18:53750
+2023-04-05 12:46:32,571 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.22.8.18:53748
+2023-04-05 12:46:32,584 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.22.8.18:53752
+2023-04-05 12:46:32,601 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.22.8.18:53754
+2023-04-05 12:46:32,626 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.22.8.18:53750
+2023-04-05 12:46:32,972 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 11.0 (TID 23) in 465 ms on 10.22.8.18 (executor 2) (1/2)
+2023-04-05 12:46:33,117 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 10.0 (TID 21) in 617 ms on 10.22.8.18 (executor 9) (1/2)
+2023-04-05 12:46:33,129 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 11.0 (TID 22) in 622 ms on 10.22.8.18 (executor 4) (2/2)
+2023-04-05 12:46:33,129 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:33,129 INFO scheduler.DAGScheduler: ShuffleMapStage 11 (map at Partition.scala:23) finished in 0.629 s
+2023-04-05 12:46:33,130 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:33,130 INFO scheduler.DAGScheduler: running: Set(ShuffleMapStage 10)
+2023-04-05 12:46:33,130 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ResultStage 13)
+2023-04-05 12:46:33,130 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:33,365 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 10.0 (TID 20) in 866 ms on 10.22.8.18 (executor 3) (2/2)
+2023-04-05 12:46:33,365 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:33,365 INFO scheduler.DAGScheduler: ShuffleMapStage 10 (flatMap at Partition.scala:21) finished in 0.872 s
+2023-04-05 12:46:33,366 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:33,366 INFO scheduler.DAGScheduler: running: Set()
+2023-04-05 12:46:33,366 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ResultStage 13)
+2023-04-05 12:46:33,366 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:33,366 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 12 (MapPartitionsRDD[47] at map at Partition.scala:26), which has no missing parents
+2023-04-05 12:46:33,368 INFO memory.MemoryStore: Block broadcast_13 stored as values in memory (estimated size 6.9 KiB, free 14.2 GiB)
+2023-04-05 12:46:33,370 INFO memory.MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 14.2 GiB)
+2023-04-05 12:46:33,371 INFO storage.BlockManagerInfo: Added broadcast_13_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:33,371 INFO spark.SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:33,372 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 12 (MapPartitionsRDD[47] at map at Partition.scala:26) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:33,372 INFO scheduler.TaskSchedulerImpl: Adding task set 12.0 with 2 tasks resource profile 0
+2023-04-05 12:46:33,373 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 12.0 (TID 24) (10.22.8.18, executor 1, partition 0, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:33,373 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 12.0 (TID 25) (10.22.8.18, executor 3, partition 1, NODE_LOCAL, 4481 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:33,384 INFO storage.BlockManagerInfo: Added broadcast_13_piece0 in memory on 10.22.8.18:39973 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:33,388 INFO storage.BlockManagerInfo: Added broadcast_13_piece0 in memory on 10.22.8.18:38117 (size: 3.8 KiB, free: 14.2 GiB)
+2023-04-05 12:46:33,389 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 12 to 10.22.8.18:53742
+2023-04-05 12:46:33,396 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 12 to 10.22.8.18:53754
+2023-04-05 12:46:33,451 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 5 to 10.22.8.18:53742
+2023-04-05 12:46:33,465 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 5 to 10.22.8.18:53754
+2023-04-05 12:46:33,733 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 12.0 (TID 24) in 361 ms on 10.22.8.18 (executor 1) (1/2)
+2023-04-05 12:46:33,835 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 12.0 (TID 25) in 462 ms on 10.22.8.18 (executor 3) (2/2)
+2023-04-05 12:46:33,835 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:33,835 INFO scheduler.DAGScheduler: ShuffleMapStage 12 (map at Partition.scala:26) finished in 0.468 s
+2023-04-05 12:46:33,835 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2023-04-05 12:46:33,835 INFO scheduler.DAGScheduler: running: Set()
+2023-04-05 12:46:33,835 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 13)
+2023-04-05 12:46:33,835 INFO scheduler.DAGScheduler: failed: Set()
+2023-04-05 12:46:33,836 INFO scheduler.DAGScheduler: Submitting ResultStage 13 (ShuffledRDD[48] at reduceByKey at Partition.scala:26), which has no missing parents
+2023-04-05 12:46:33,838 INFO memory.MemoryStore: Block broadcast_14 stored as values in memory (estimated size 5.2 KiB, free 14.2 GiB)
+2023-04-05 12:46:33,840 INFO memory.MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 3.0 KiB, free 14.2 GiB)
+2023-04-05 12:46:33,841 INFO storage.BlockManagerInfo: Added broadcast_14_piece0 in memory on exp-8-18.ib.cluster:35487 (size: 3.0 KiB, free: 14.2 GiB)
+2023-04-05 12:46:33,841 INFO spark.SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1478
+2023-04-05 12:46:33,842 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 13 (ShuffledRDD[48] at reduceByKey at Partition.scala:26) (first 15 tasks are for partitions Vector(0, 1))
+2023-04-05 12:46:33,842 INFO scheduler.TaskSchedulerImpl: Adding task set 13.0 with 2 tasks resource profile 0
+2023-04-05 12:46:33,845 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 13.0 (TID 26) (10.22.8.18, executor 9, partition 0, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:33,845 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 13.0 (TID 27) (10.22.8.18, executor 8, partition 1, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+2023-04-05 12:46:33,857 INFO storage.BlockManagerInfo: Added broadcast_14_piece0 in memory on 10.22.8.18:38929 (size: 3.0 KiB, free: 14.2 GiB)
+2023-04-05 12:46:33,861 INFO storage.BlockManagerInfo: Added broadcast_14_piece0 in memory on 10.22.8.18:36529 (size: 3.0 KiB, free: 14.2 GiB)
+2023-04-05 12:46:33,890 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 10.22.8.18:53752
+2023-04-05 12:46:33,893 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 10.22.8.18:53744
+2023-04-05 12:46:33,902 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 13.0 (TID 26) in 59 ms on 10.22.8.18 (executor 9) (1/2)
+2023-04-05 12:46:33,918 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 13.0 (TID 27) in 73 ms on 10.22.8.18 (executor 8) (2/2)
+2023-04-05 12:46:33,918 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+2023-04-05 12:46:33,919 INFO scheduler.DAGScheduler: ResultStage 13 (collect at Partition.scala:26) finished in 0.082 s
+2023-04-05 12:46:33,922 INFO scheduler.DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+2023-04-05 12:46:33,922 INFO scheduler.TaskSchedulerImpl: Killing all running tasks in stage 13: Stage finished
+2023-04-05 12:46:33,924 INFO scheduler.DAGScheduler: Job 0 finished: collect at Partition.scala:26, took 10.858666 s
+(85396,27698)
+(21958,10507)
+(40720,6153)
+(59780,8136)
+(67668,12707)
+(24310,4219)
+(29,5560)
+(9943,3953)
+(81217,14557)
+(10147,6510)
+2023-04-05 12:46:33,938 INFO spark.SparkContext: Invoking stop() from shutdown hook
+2023-04-05 12:46:33,946 INFO server.AbstractConnector: Stopped Spark@568ce404{HTTP/1.1, (http/1.1)}{exp-8-18.ib.cluster:4040}
+2023-04-05 12:46:33,948 INFO ui.SparkUI: Stopped Spark web UI at http://exp-8-18.ib.cluster:4040
+2023-04-05 12:46:33,954 INFO cluster.StandaloneSchedulerBackend: Shutting down all executors
+2023-04-05 12:46:33,954 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+2023-04-05 12:46:33,973 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+2023-04-05 12:46:34,019 WARN netty.Dispatcher: Message RemoteProcessDisconnected(10.22.8.18:53790) dropped. Could not find BlockManagerEndpoint1.
+2023-04-05 12:46:34,019 INFO memory.MemoryStore: MemoryStore cleared
+2023-04-05 12:46:34,019 INFO storage.BlockManager: BlockManager stopped
+2023-04-05 12:46:34,024 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+2023-04-05 12:46:34,027 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+2023-04-05 12:46:34,071 INFO spark.SparkContext: Successfully stopped SparkContext
+2023-04-05 12:46:34,071 INFO util.ShutdownHookManager: Shutdown hook called
+2023-04-05 12:46:34,072 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-2f04ca0f-8a8a-41a0-aff2-e53d3f95935a
+2023-04-05 12:46:34,098 INFO util.ShutdownHookManager: Deleting directory /scratch/ksavaliya/job_21513968/spark-010e5831-2d0d-46d0-a399-27f3e6a1a5b3
+Copying Hadoop logs back to /home/ksavaliya/expansecluster/logs...
+'/scratch/ksavaliya/job_21513968/logs' -> '/home/ksavaliya/expansecluster/logs'
+'/scratch/ksavaliya/job_21513968/logs/hadoop-ksavaliya-namenode-exp-8-18.out' -> '/home/ksavaliya/expansecluster/logs/hadoop-ksavaliya-namenode-exp-8-18.out'
+'/scratch/ksavaliya/job_21513968/logs/SecurityAuth-ksavaliya.audit' -> '/home/ksavaliya/expansecluster/logs/SecurityAuth-ksavaliya.audit'
+'/scratch/ksavaliya/job_21513968/logs/hadoop-ksavaliya-datanode-exp-8-18.out' -> '/home/ksavaliya/expansecluster/logs/hadoop-ksavaliya-datanode-exp-8-18.out'
+'/scratch/ksavaliya/job_21513968/logs/hadoop-ksavaliya-namenode-exp-8-18.log' -> '/home/ksavaliya/expansecluster/logs/hadoop-ksavaliya-namenode-exp-8-18.log'
+'/scratch/ksavaliya/job_21513968/logs/hadoop-ksavaliya-datanode-exp-8-18.log' -> '/home/ksavaliya/expansecluster/logs/hadoop-ksavaliya-datanode-exp-8-18.log'
+'/scratch/ksavaliya/job_21513968/logs/hadoop-ksavaliya-secondarynamenode-exp-8-18.out' -> '/home/ksavaliya/expansecluster/logs/hadoop-ksavaliya-secondarynamenode-exp-8-18.out'
+'/scratch/ksavaliya/job_21513968/logs/hadoop-ksavaliya-secondarynamenode-exp-8-18.log' -> '/home/ksavaliya/expansecluster/logs/hadoop-ksavaliya-secondarynamenode-exp-8-18.log'
+'/scratch/ksavaliya/job_21513968/logs/spark-ksavaliya-org.apache.spark.deploy.master.Master-1-exp-8-18.out' -> '/home/ksavaliya/expansecluster/logs/spark-ksavaliya-org.apache.spark.deploy.master.Master-1-exp-8-18.out'
+'/scratch/ksavaliya/job_21513968/logs/spark-ksavaliya-org.apache.spark.deploy.worker.Worker-1-exp-8-18.out' -> '/home/ksavaliya/expansecluster/logs/spark-ksavaliya-org.apache.spark.deploy.worker.Worker-1-exp-8-18.out'
+removed '/scratch/ksavaliya/job_21513968/tmp/dfs/namesecondary/in_use.lock'
+removed directory '/scratch/ksavaliya/job_21513968/tmp/dfs/namesecondary'
+removed directory '/scratch/ksavaliya/job_21513968/tmp/dfs'
+removed directory '/scratch/ksavaliya/job_21513968/tmp'
+removed '/scratch/ksavaliya/job_21513968/hdfs_data/current/VERSION'
+removed '/scratch/ksavaliya/job_21513968/hdfs_data/current/BP-466687145-198.202.102.73-1680723957104/scanner.cursor'
+removed directory '/scratch/ksavaliya/job_21513968/hdfs_data/current/BP-466687145-198.202.102.73-1680723957104/tmp'
+removed '/scratch/ksavaliya/job_21513968/hdfs_data/current/BP-466687145-198.202.102.73-1680723957104/current/VERSION'
+removed '/scratch/ksavaliya/job_21513968/hdfs_data/current/BP-466687145-198.202.102.73-1680723957104/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta'
+removed '/scratch/ksavaliya/job_21513968/hdfs_data/current/BP-466687145-198.202.102.73-1680723957104/current/finalized/subdir0/subdir0/blk_1073741825'
+removed directory '/scratch/ksavaliya/job_21513968/hdfs_data/current/BP-466687145-198.202.102.73-1680723957104/current/finalized/subdir0/subdir0'
+removed directory '/scratch/ksavaliya/job_21513968/hdfs_data/current/BP-466687145-198.202.102.73-1680723957104/current/finalized/subdir0'
+removed directory '/scratch/ksavaliya/job_21513968/hdfs_data/current/BP-466687145-198.202.102.73-1680723957104/current/finalized'
+removed directory '/scratch/ksavaliya/job_21513968/hdfs_data/current/BP-466687145-198.202.102.73-1680723957104/current/rbw'
+removed directory '/scratch/ksavaliya/job_21513968/hdfs_data/current/BP-466687145-198.202.102.73-1680723957104/current'
+removed directory '/scratch/ksavaliya/job_21513968/hdfs_data/current/BP-466687145-198.202.102.73-1680723957104'
+removed directory '/scratch/ksavaliya/job_21513968/hdfs_data/current'
+removed '/scratch/ksavaliya/job_21513968/hdfs_data/in_use.lock'
+removed directory '/scratch/ksavaliya/job_21513968/hdfs_data'
+removed '/scratch/ksavaliya/job_21513968/logs/spark-ksavaliya-org.apache.spark.deploy.master.Master-1-exp-8-18.out'
+removed '/scratch/ksavaliya/job_21513968/logs/hadoop-ksavaliya-namenode-exp-8-18.out'
+removed '/scratch/ksavaliya/job_21513968/logs/hadoop-ksavaliya-datanode-exp-8-18.log'
+removed '/scratch/ksavaliya/job_21513968/logs/hadoop-ksavaliya-datanode-exp-8-18.out'
+removed '/scratch/ksavaliya/job_21513968/logs/hadoop-ksavaliya-secondarynamenode-exp-8-18.log'
+removed '/scratch/ksavaliya/job_21513968/logs/hadoop-ksavaliya-namenode-exp-8-18.log'
+removed '/scratch/ksavaliya/job_21513968/logs/spark-ksavaliya-org.apache.spark.deploy.worker.Worker-1-exp-8-18.out'
+removed '/scratch/ksavaliya/job_21513968/logs/SecurityAuth-ksavaliya.audit'
+removed '/scratch/ksavaliya/job_21513968/logs/hadoop-ksavaliya-secondarynamenode-exp-8-18.out'
+removed directory '/scratch/ksavaliya/job_21513968/logs'
+removed '/scratch/ksavaliya/job_21513968/namenode_data/current/fsimage_0000000000000000000.md5'
+removed '/scratch/ksavaliya/job_21513968/namenode_data/current/seen_txid'
+removed '/scratch/ksavaliya/job_21513968/namenode_data/current/VERSION'
+removed '/scratch/ksavaliya/job_21513968/namenode_data/current/edits_inprogress_0000000000000000001'
+removed '/scratch/ksavaliya/job_21513968/namenode_data/current/fsimage_0000000000000000000'
+removed directory '/scratch/ksavaliya/job_21513968/namenode_data/current'
+removed '/scratch/ksavaliya/job_21513968/namenode_data/in_use.lock'
+removed directory '/scratch/ksavaliya/job_21513968/namenode_data'
+removed '/scratch/ksavaliya/job_21513968/pids/hadoop-ksavaliya-namenode.pid'
+removed '/scratch/ksavaliya/job_21513968/pids/hadoop-ksavaliya-datanode.pid'
+removed '/scratch/ksavaliya/job_21513968/pids/hadoop-ksavaliya-secondarynamenode.pid'
+removed directory '/scratch/ksavaliya/job_21513968/pids'
